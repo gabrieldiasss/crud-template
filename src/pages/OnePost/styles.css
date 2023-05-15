@@ -1,0 +1,7 @@
+.onePostContainer {
+    max-width: 700px;
+}
+
+.onePostContainer p {
+    margin-top: 1rem;
+}

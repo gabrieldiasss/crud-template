@@ -1,0 +1,26 @@
+article + article {
+    margin-top: 2rem;
+}
+
+.cardContainer {
+    background-color: #212121;
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.cardContainer header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardContainer p {
+    margin-top: 1rem;
+}
+
+.cardContainer .buttonsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
