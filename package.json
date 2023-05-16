@@ -7,18 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "server": "json-server --watch db.json --port 8000"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.1.0",
-    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.9",
-    "react-icons": "^4.8.0",
-    "react-router-dom": "^6.11.1",
-    "yup": "^1.1.1"
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -28,7 +22,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
-    "json-server": "^0.17.3",
     "vite": "^4.3.2"
   }
 }

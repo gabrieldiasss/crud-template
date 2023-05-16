@@ -1,57 +1,22 @@
-import { useForm } from "react-hook-form";
 import "./styles.css";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { useEffect } from "react";
-import { api } from "../../lib/axios";
-import { useParams } from "react-router-dom";
 
-const postSchema = yup.object({
-  title: yup.string().required("Informe o campo título"),
-  description: yup.string().required("O campo descrição não pode ser vázio"),
-  content: yup.string().required("O campo descrição não pode ser vázio"),
-});
-
-export function Form({ title, textButton, onAction }) {
-  const { id } = useParams();
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm({
-    resolver: yupResolver(postSchema),
-  });
-
-  async function getDataUpdate() {
-    const response = await api.get(`/posts/${id}`);
-    reset(response.data);
-  }
-
-  useEffect(() => {
-    getDataUpdate()
-  }, []);
-
+export function Form() {
   return (
-    <form onSubmit={handleSubmit(onAction)}>
-      <h2>{title}</h2>
+    <form>
+      <h2>Título</h2>
       <div className="field">
-        <input placeholder="Título" {...register("title")} />
-        {errors.title?.message}
+        <input placeholder="Título" />
       </div>
 
       <div className="field">
-        <input placeholder="Descrição" {...register("description")} />
-        {errors.description?.message}
+        <input placeholder="Descrição" />
       </div>
 
       <div className="field">
-        <textarea placeholder="Conteúdo" {...register("content")} />
-        {errors.content?.message}
+        <textarea placeholder="Descrição" />
       </div>
 
-      <button type="submit">{textButton}</button>
+      <button>Botão</button>
     </form>
   );
 }

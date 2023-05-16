@@ -5,7 +5,6 @@ article + article {
 .cardContainer {
     background-color: #212121;
     max-width: 600px;
-    min-width: 600px;
     padding: 2rem;
     border-radius: 8px;
 }
@@ -14,11 +13,6 @@ article + article {
     display: flex;
     justify-content: space-between;
 }
-
-.cardContainer h2 {
-    text-align: left;
-}
-
 
 .cardContainer p {
     margin-top: 1rem;
